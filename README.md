@@ -125,7 +125,8 @@ xtitle('Magnitude Response', 'Frequency (Hz)', 'Magnitude');
 ## OUTPUT (LPF) : <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/c558c617-3952-45df-b555-5c064792147d" />
 
 
-## OUTPUT (HPF) : ![WhatsApp Image 2025-10-30 at 11 29 12_be715f6d](https://github.com/user-attachments/assets/fb45d99b-1f8f-4d2c-adfb-30af7fd18718)
+## OUTPUT (HPF) : ![WhatsApp Image 2025-10-30 at 11 32 13_d80cd448](https://github.com/user-attachments/assets/37a06fa3-32d3-4fd8-bdae-b30fcc3e70af)
+
 
 
 ## RESULT: HENCE THE OUTPUT WAS VERIFIED FOR THE IIR BUTTERWORTH IIR FILTER.
