@@ -57,7 +57,8 @@ xgrid();
 
 
 
-## PROGRAM (HPF): // ------------------------------
+## PROGRAM (HPF): // 
+'''
 //   High-Pass Filter in Scilab
 // ------------------------------
 clc;
@@ -118,6 +119,7 @@ xtitle('Filtered Output (High-Pass)', 'Time (s)', 'Amplitude');
 scf(1);
 plot(fr * fs, hm);
 xtitle('Magnitude Response', 'Frequency (Hz)', 'Magnitude');
+'''
 
 
 
