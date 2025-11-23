@@ -7,7 +7,9 @@
 ## APPARATUS REQUIRED: 
 PC installed with SCILAB. 
 
-## PROGRAM (LPF): clc;
+## PROGRAM (LPF):
+'''
+clc;
 clear;
 close;
 
@@ -53,73 +55,12 @@ xlabel('Normalized Digital Frequency (\omega / \pi)');
 ylabel('Magnitude');
 title('Frequency Response of Butterworth IIR Low Pass Filter');
 xgrid();
-
-
-
-
-## PROGRAM (HPF): // 
 '''
-//   High-Pass Filter in Scilab
-// ------------------------------
-clc;
-clear;
 
-// Filter Design Parameters
-fs    = 1000;     // Sampling Frequency
-fc    = 200;      // Cutoff Frequency
-order = 4;        // Filter Order
 
-// Normalized Cutoff Frequency (fc/fs)
-Wn = fc / fs;
 
-// Design High-Pass Butterworth Filter
-hz = iir(order, 'hp', 'butt', Wn, [0 0]);
-b  = coeff(hz, 'num');   // Numerator coefficients
-a  = coeff(hz, 'den');   // Denominator coefficients
 
-// Display Filter Details
-disp("----- FILTER DESIGN -----");
-disp("Sampling Frequency (fs): " + string(fs));
-disp("Cutoff Frequency (fc): " + string(fc));
-disp("Filter Order: " + string(order));
-
-disp("Numerator Coefficients (b):");
-disp(b);
-disp("Denominator Coefficients (a):");
-disp(a);
-
-// ------------------------------
-//   Test Signal Input
-// ------------------------------
-t  = 0:1/fs:0.2;
-f1 = 50;     // Low frequency (should be removed)
-f2 = 350;    // High frequency (should pass)
-x  = 0.5*sin(2*%pi*f1*t) + sin(2*%pi*f2*t);
-
-// Filter the Signal
-y = filter(b, a, x);
-
-// ------------------------------
-//   Time Domain Plots
-// ------------------------------
-scf(0);
-subplot(2,1,1);
-plot(t, x);
-xtitle('Input Signal', 'Time (s)', 'Amplitude');
-
-subplot(2,1,2);
-plot(t, y);
-xtitle('Filtered Output (High-Pass)', 'Time (s)', 'Amplitude');
-
-// ------------------------------
-//   Frequency Response
-// ------------------------------
-[hm, fr] = frmag(hz, 512);   // Magnitude response
-
-scf(1);
-plot(fr * fs, hm);
-xtitle('Magnitude Response', 'Frequency (Hz)', 'Magnitude');
-'''
+## PROGRAM (HPF): 
 
 
 
